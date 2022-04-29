@@ -169,6 +169,157 @@ header nav a {
   opacity: 1;
 }
 
+.service-img {
+  width: 50%;
+}
+
+.service-img img,
+.service2 img {
+  width: 100%;
+  display: block;
+}
+
+.service2 {
+  width: 50%;
+  position: relative;
+}
+
+.service2-info1,
+.service2-info2 {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service2-info1 {
+  color: hsl(167, 40%, 24%);
+}
+
+.service2-info2 {
+  color: hsl(198, 62%, 26%);
+}
+
+.service2 h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 1.7em;
+  margin-bottom: 1em;
+}
+
+.service2 p {
+  font-size: 1em;
+  line-height: 1.4em;
+  width: 55%;
+  text-align: center;
+}
+
+.testimonials-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+}
+
+.testimonials-section h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: hsl(232, 10%, 55%);
+  margin-bottom: 3em;
+}
+
+.clients {
+  display: flex;
+}
+
+.client {
+  max-width: 350px;
+  text-align: center;
+  margin: 1em;
+}
+
+.client img {
+  height: 70px;
+  border-radius: 50%;
+}
+
+.client p {
+  color: hsl(232, 10%, 55%);
+  font-size: 1.1em;
+  margin: 3em 0;
+  line-height: 1.5em;
+}
+
+.client h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: hsl(212, 27%, 19%);
+  font-size: 1.1em;
+}
+
+.client span {
+  font-size: 0.8em;
+  color: hsl(210, 4%, 67%);
+  display: block;
+  margin-top: 0.7em;
+}
+
+.gallery-section {
+  display: flex;
+}
+
+.gallery-section img {
+  display: block;
+  width: 25%;
+}
+
+footer {
+  background-color: hsla(168, 34%, 41%, 70%);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  padding: 4em 1em;
+  align-items: center;
+}
+
+.logo-footer img {
+  filter: invert(24%) sepia(5%) saturate(4614%) hue-rotate(116deg)
+    brightness(102%) contrast(82%);
+}
+
+.nav-footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(167, 40%, 24%);
+  margin: 2em 2em;
+}
+
+.attribution {
+  color: hsl(167, 40%, 24%);
+  text-align: center;
+  padding: 0.5em 1em;
+  opacity: 60%;
+}
+
+.attribution a {
+  color: hsl(167, 40%, 24%);
+}
+
+.attribution a:hover {
+  color: white;
+}
+
 .hhhhh {
   color: hsl(7, 99%, 70%);
   color: hsl(51, 100%, 49%);
@@ -179,15 +330,6 @@ header nav a {
   color: hsl(213, 9%, 39%);
   color: hsl(232, 10%, 55%);
   color: hsl(210, 4%, 67%);
-}
-
-.service-img {
-  width: 50%;
-}
-
-.service-img img {
-  width: 100%;
-  display: block;
 }
 
 @media screen and (max-width: 660px) {
