@@ -219,12 +219,11 @@ header nav a {
 }
 
 .testimonials-section {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2em;
+  margin: 6em 2em;
 }
 
 .testimonials-section h2 {
@@ -235,6 +234,7 @@ header nav a {
   letter-spacing: 0.3em;
   color: hsl(232, 10%, 55%);
   margin-bottom: 3em;
+  text-align: center;
 }
 
 .clients {
@@ -248,7 +248,7 @@ header nav a {
 }
 
 .client img {
-  height: 70px;
+  height: 4.2em;
   border-radius: 50%;
 }
 
@@ -283,84 +283,197 @@ header nav a {
 }
 
 footer {
-  background-color: hsla(168, 34%, 41%, 70%);
+  background-color: hsl(167, 46%, 75%);
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
-  padding: 4em 1em;
+  padding: 4em 1em 3em;
   align-items: center;
 }
 
-.logo-footer img {
-  filter: invert(24%) sepia(5%) saturate(4614%) hue-rotate(116deg)
-    brightness(102%) contrast(82%);
+.logo-footer {
+  margin-bottom: 2.5em;
+}
+
+.nav-footer span {
+  display: inline-block;
+  width: 5em;
+  margin: 0 1em;
+  text-align: center;
 }
 
 .nav-footer a {
-  display: inline-block;
   text-decoration: none;
-  color: hsl(167, 40%, 24%);
-  margin: 2em 2em;
+  color: hsla(167, 40%, 24%, 0.7);
+  font-size: 1.1em;
+  transition: color 0.2s ease;
+}
+
+.nav-footer a:hover {
+  color: white;
+}
+
+.contact {
+  margin-top: 3em;
+}
+
+.contact a {
+  color: hsla(167, 40%, 24%, 0.7);
+  font-size: 1.4em;
+  margin: 0 0.5em;
+  transition: color 0.2s ease;
+}
+
+.fb:hover {
+  color: #013ea2;
+}
+
+.in:hover {
+  color: #da284b;
+}
+
+.tw:hover {
+  color: #1c9cea;
+}
+
+.pr:hover {
+  color: #e60023;
 }
 
 .attribution {
-  color: hsl(167, 40%, 24%);
+  color: hsla(167, 40%, 24%, 0.7);
   text-align: center;
   padding: 0.5em 1em;
-  opacity: 60%;
 }
 
 .attribution a {
-  color: hsl(167, 40%, 24%);
+  color: hsla(167, 40%, 24%, 0.7);
+  transition: color 0.2s ease;
 }
 
 .attribution a:hover {
   color: white;
 }
 
-.hhhhh {
-  color: hsl(7, 99%, 70%);
-  color: hsl(51, 100%, 49%);
-  color: hsl(167, 40%, 24%);
-  color: hsl(198, 62%, 26%);
-  color: hsl(168, 34%, 41%);
-  color: hsl(212, 27%, 19%);
-  color: hsl(213, 9%, 39%);
-  color: hsl(232, 10%, 55%);
-  color: hsl(210, 4%, 67%);
+@media screen and (max-width: 980px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .egg {
+    order: -1;
+  }
+
+  .service-info,
+  .service-img,
+  .service2 {
+    width: 100%;
+  }
+
+  .service-info-content {
+    margin: 6em auto;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 660px) {
-  body {
-    font-size: 12px;
-  }
-
-  header {
-    padding: 1em 2em;
-  }
-
   header nav {
     display: none;
   }
 
   .hamburger {
-    display: block;
+    display: flex;
   }
 
-  .hamburger img,
-  .logo img {
-    height: 2.3em;
+  .logo-header img {
+    height: 1.7em;
   }
 
   .main-section {
     background-image: url(images/mobile/image-header.jpg);
-    margin-top: -5.3em;
+    margin-top: -3.9em;
   }
 
-  .arrow {
-    margin-top: 5em;
-    margin-bottom: 0em;
+  .testimonials-section {
+    margin-bottom: 3em;
+  }
+
+  .clients {
+    flex-direction: column;
+  }
+
+  .client {
+    margin: 2.5em 0;
+  }
+
+  .client p {
+    margin: 1.5em 0;
+  }
+
+  .gallery-section {
+    flex-wrap: wrap;
+  }
+
+  .gallery-section img {
+    width: 50%;
+  }
+
+  .service-info-content {
+    width: 80%;
+  }
+
+  .img-serv-1 {
+    content: url(images/mobile/image-transform.jpg);
+  }
+
+  .img-serv-2 {
+    content: url(images/mobile/image-stand-out.jpg);
+  }
+
+  .img-glr-1 {
+    content: url(images/mobile/image-gallery-milkbottles.jpg);
+  }
+
+  .img-glr-2 {
+    content: url(images/mobile/image-gallery-orange.jpg);
+  }
+
+  .img-glr-3 {
+    content: url(images/mobile/image-gallery-cone.jpg);
+  }
+
+  .img-glr-4 {
+    content: url(images/mobile/image-gallery-sugar-cubes.jpg);
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .img-serv-3 {
+    content: url(images/mobile/image-graphic-design.jpg);
+  }
+
+  .img-serv-4 {
+    content: url(images/mobile/image-photography.jpg);
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-footer span {
+    width: auto;
+    margin: 1em;
+    text-align: center;
+  }
+
+  body {
+    font-size: 12px;
   }
 }
