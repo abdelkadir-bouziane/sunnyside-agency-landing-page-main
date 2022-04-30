@@ -396,11 +396,11 @@ footer {
 
   .background {
     display: none;
-    height: 95vh;
+    height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
-    bottom: 0;
+    top: 2em;
     z-index: 11;
   }
 
