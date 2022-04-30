@@ -18,6 +18,7 @@
     ></script>
   </head>
   <body>
+    <div class="background"></div>
     <header>
       <div class="logo-header">
         <a href="#"><img src="images/logo.svg" alt="logo" /></a>
@@ -31,7 +32,7 @@
         </ul>
       </nav>
       <div class="hamburger">
-        <img src="images/icon-hamburger.svg" alt="" />
+        <img src="images/icon-hamburger.svg" alt="hamburger" />
       </div>
     </header>
 
@@ -196,7 +197,7 @@
           <span><a href="#services">Services</a></span>
           <span><a href="#projects">Projects</a></span>
         </nav>
-        <div class="contact">
+        <div class="contact" id="contact">
           <a
             href="https://www.facebook.com/abdelkadir.bz"
             target="_blank"
@@ -223,5 +224,30 @@
         >.
       </div>
     </footer>
+    <script>
+      const hamburger = document.getElementsByClassName("hamburger")[0];
+      const nav = document.querySelectorAll("header nav")[0];
+      const background = document.getElementsByClassName("background")[0];
+      const header = document.querySelectorAll("header")[0];
+
+      if (window.innerWidth <= 660) nav.style.display = "none";
+
+      function showOrHideMenu() {
+        if (nav.style.display == "none") {
+          nav.style.display = "block";
+          background.style.display = "block";
+        } else {
+          nav.style.display = "none";
+          background.style.display = "none";
+        }
+      }
+
+      function hideMenu() {
+        if (nav.style.display == "block") showOrHideMenu();
+      }
+
+      hamburger.onclick = showOrHideMenu;
+      background.onclick = hideMenu;
+    </script>
   </body>
 </html>

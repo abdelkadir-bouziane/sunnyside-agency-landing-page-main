@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
 
-/*
-font-family: 'Barlow', sans-serif;
-font-family: 'Fraunces', serif;
-*/
-
 *,
 *::after,
 *::before {
@@ -142,23 +137,23 @@ header nav a {
   font-weight: 900;
   color: hsl(212, 27%, 19%);
   font-size: 1.1em;
-  padding: 0 0.5em;
+  padding: 0 0.4em;
   position: relative;
   z-index: 10;
 }
 
 .learn-more div {
-  height: 0.5em;
+  height: 0.4em;
   width: 100%;
   opacity: 0.3;
   border-radius: 100em;
   position: absolute;
   bottom: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.1s ease;
 }
 
 .yellow-div {
-  background-color: hsla(51, 100%, 49%);
+  background-color: hsl(51, 100%, 49%);
 }
 
 .red-div {
@@ -166,7 +161,7 @@ header nav a {
 }
 
 .learn-more:hover div {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .service-img {
@@ -308,7 +303,7 @@ footer {
   text-decoration: none;
   color: hsla(167, 40%, 24%, 0.7);
   font-size: 1.1em;
-  transition: color 0.2s ease;
+  transition: color 0.1s ease;
 }
 
 .nav-footer a:hover {
@@ -323,7 +318,7 @@ footer {
   color: hsla(167, 40%, 24%, 0.7);
   font-size: 1.4em;
   margin: 0 0.5em;
-  transition: color 0.2s ease;
+  transition: color 0.1s ease;
 }
 
 .fb:hover {
@@ -350,7 +345,7 @@ footer {
 
 .attribution a {
   color: hsla(167, 40%, 24%, 0.7);
-  transition: color 0.2s ease;
+  transition: color 0.1s ease;
 }
 
 .attribution a:hover {
@@ -382,7 +377,55 @@ footer {
 
 @media screen and (max-width: 660px) {
   header nav {
+    position: absolute;
+    width: calc(100% - 4em);
+    top: 5.5em;
     display: none;
+  }
+
+  header nav::after {
+    content: "";
+    height: 4em;
+    width: 4em;
+    background-color: white;
+    transform: skewY(-45deg);
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .background {
+    display: none;
+    height: 95vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    z-index: 11;
+  }
+
+  header nav ul {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    position: relative;
+    z-index: 10;
+  }
+
+  header nav a {
+    color: hsl(232, 10%, 55%);
+    font-size: 1.3em;
+    margin: 1em 0;
+  }
+
+  .contact-btn {
+    background-color: hsl(51, 100%, 49%);
+  }
+
+  .contact-btn:hover {
+    background-color: hsla(51, 100%, 49%, 0.6);
+    color: hsla(212, 27%, 19%, 0.6);
   }
 
   .hamburger {
