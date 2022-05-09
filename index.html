@@ -25,7 +25,7 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#about">About</a></li>
+          <li><a href="#">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact" class="contact-btn">Contact</a></li>
@@ -92,7 +92,7 @@
         </div>
       </div>
 
-      <div class="service2">
+      <div class="service2" id="projects">
         <img
           class="img-serv-3"
           src="images/desktop/image-graphic-design.jpg"
@@ -193,7 +193,7 @@
           </a>
         </div>
         <nav class="nav-footer">
-          <span><a href="#about">About</a></span>
+          <span><a href="#">About</a></span>
           <span><a href="#services">Services</a></span>
           <span><a href="#projects">Projects</a></span>
         </nav>
@@ -229,10 +229,21 @@
       const nav = document.querySelectorAll("header nav")[0];
       const background = document.getElementsByClassName("background")[0];
       const header = document.querySelectorAll("header")[0];
+      const navBtns = document.querySelectorAll("header nav a");
 
-      if (window.innerWidth <= 660) nav.style.display = "none";
+      window.onload = () => {
+        if (window.innerWidth <= 660) nav.style.display = "none";
+      };
 
-      function showOrHideMenu() {
+      window.onresize = () => {
+        if (window.innerWidth > 660) nav.style.display = "block";
+        else {
+          nav.style.display = "none";
+          background.style.display = "none";
+        }
+      };
+
+      const showOrHideMenu = () => {
         if (nav.style.display == "none") {
           nav.style.display = "block";
           background.style.display = "block";
@@ -240,14 +251,18 @@
           nav.style.display = "none";
           background.style.display = "none";
         }
-      }
+      };
 
-      function hideMenu() {
+      const hideMenu = () => {
         if (nav.style.display == "block") showOrHideMenu();
-      }
+      };
 
       hamburger.onclick = showOrHideMenu;
       background.onclick = hideMenu;
+
+      for (let btn of navBtns) {
+        btn.onclick = hideMenu;
+      }
     </script>
   </body>
 </html>

@@ -379,14 +379,14 @@ footer {
   header nav {
     position: absolute;
     width: calc(100% - 4em);
-    top: 5.5em;
+    top: 5.2em;
     display: none;
   }
 
   header nav::after {
     content: "";
-    height: 4em;
-    width: 4em;
+    height: 3em;
+    width: 3em;
     background-color: white;
     transform: skewY(-45deg);
     position: absolute;
@@ -408,14 +408,14 @@ footer {
     background-color: white;
     display: flex;
     flex-direction: column;
-    padding: 2em 0;
+    padding: 1em 0;
     position: relative;
     z-index: 10;
   }
 
   header nav a {
     color: hsl(232, 10%, 55%);
-    font-size: 1.3em;
+    font-size: 1em;
     margin: 1em 0;
   }
 
