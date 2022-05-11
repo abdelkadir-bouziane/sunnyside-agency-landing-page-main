@@ -261,7 +261,9 @@
       background.onclick = hideMenu;
 
       for (let btn of navBtns) {
-        btn.onclick = hideMenu;
+        btn.onclick = () => {
+          if (window.innerWidth <= 660) hideMenu();
+        };
       }
     </script>
   </body>
